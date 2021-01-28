@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container">
+        <audio autoplay controls loop class="hidden" id="level">
+            <source src="music/Levels.mp3" type="audio/mp3">
+        </audio>
         <div class="border-4 h-40 w-0 mx-auto"></div>
         <div class="text-center text-3xl font-light py-5 mx-10">
             ???: 클릭해주셔서 감사합니다.
@@ -18,6 +21,13 @@
             혜연님이 좋아할 만한 <br>다양한 <strong class="font-bold">PS4</strong> 게임🎮들을<br>소개해드립니다.<p class="text-base mt-3"><span class="text-red-600">빨간색</span>은 강추, <span class="text-green-600">초록색</span>은 추천! 유투브에도 꼭 한번씩 검색해보자!</p>
         </div>
         <div class="border-4 h-40 w-0 mx-auto"></div>
+        <div class="bg-gradient-to-r from-yellow-300 via-red-400 to-pink-400 h-40 w-40 mx-auto my-5 p-5 border-2" id="music">
+            <span class="text-center text-white font-black text-3xl">음악<p>주세요!</p>&nbsp👆🏻</span>
+        </div>
+        <div class="border-4 h-96 w-0 mx-auto"></div>
+        <div class="border-4 h-96 w-0 mx-auto"></div>
+        <div class="border-4 h-96 w-0 mx-auto"></div>
+        <div class="border-4 h-96 w-0 mx-auto"></div>
         <div class="flex flex-col">
             <div class="my-10 border-r-8 border-l-8 border-red-600">
                 <p class="font-thin text-3xl text-center">마블 스파이더맨</p>
@@ -90,19 +100,30 @@
                     <span>레고시리즈가 정말 많다 그중에 레고 월드가 재밌다더라 </span>
                 </div>
             </div>
+            <div class="border-4 h-40 w-0 mx-auto"></div>
             <div class="my-10">
                 <p class="font-thin text-xl mx-5 my-5">아래에 있는 게임들은 플레이어의 선택에 따라 결말, 스토리가 바뀌는 선택지형 게임이다. 당신의 선택하나하나에 주인공의 운명이 달려있다...!</p>
-                <div class="bg-green-100">
-                    <p class="text-base text-center">비욘드 투 소울즈</p>
-                    <p class="text-base text-center">디트로이트: 비컴 휴먼</p>
-                    <p class="text-base text-center">헤비 레인</p>
-                    <p class="text-base text-center">언틸 던</p>
+                <div class="bg-green-100 p-10">
+                    <p class="text-base text-left">1. 비욘드 투 소울즈</p>
+                    <p class="text-base text-left">2. 디트로이트: 비컴 휴먼</p>
+                    <p class="text-base text-left">3. 헤비 레인</p>
+                    <p class="text-base text-left">4. 언틸 던</p>
                 </div>
             </div>
-            <div class="my-64">
-                <p class="text-5xl text-center">꼭 <span class="font-black text-red-600">Youtube</span>에 검색해보자!</p>
+            <div class="border-4 h-40 w-0 mx-auto"></div>
+            <div class="mb-64 text-center py-6 mx-5 rounded-full border-8">
+                <span class="text-xl">실제 플레이영상은<p class="font-black text-5xl" >Youtube</p>에 검색해주세요!</span>
             </div>
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    var ad = $("#level");
+    $('#music').on('click', function(e) {
+        ad.trigger('play');
+    })
+});
+</script>
 </body>
 </html>
