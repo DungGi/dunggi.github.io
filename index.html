@@ -11,7 +11,7 @@
     <div class="container">
         <div class="my-80 mx-5 text-center p-5 bg-gradient-to-r from-yellow-300 via-red-400 to-pink-400 rounded-md">
             <p class="text-xl mb-3 text-white"><b>음악을 재생해주세요</b></p>
-            <audio autoplay controls class="mx-auto">
+            <audio autoplay controls loop class="mx-auto" id="sofar">
                 <source src="music/SoFarAway.mp3" type="audio/mp3">
             </audio>
         </div>
@@ -21,65 +21,57 @@
             <div class="pb-32">
                 <p class="font-bold mx-5">1. 커스텀 FILA 레이</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/secrect.png" class="rounded-lg">
+                    <span>곧 다가오는 봄에 신기 좋은 신발.. 하얀부츠대신 이걸로 결정</span>
                 </div>
             </div>
             <div class="py-32">
                 <p class="font-bold mx-5">2. 미밴드5 + 스트랩</p>
                 <div class="mx-5">
                     <img src="img/miband.png" class="rounded-lg">
-                    <p>1.Mi Fit 어플 설치 후 연결</p>
+                    <p>스트랩색이 내가 생각하는 핑크가 아니라 당황해쓰</p>
                 </div>
             </div>
             <div class="py-32">
-                <p class="font-bold mx-5">3. 오천만원</p>
+                <p class="font-bold mx-5">3. ???</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/mail.png" class="rounded-lg">
+                    <span>이게 뭐지???</span>
                 </div>
             </div>
             <div class="py-32">
                 <p class="font-bold mx-5">4. MLB 마스크, 티셔츠</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/MLB.png" class="rounded-lg">
+                    <span>티셔츠 뒷면의 디자인이 마음에 들어할거같았다.</span>
                 </div>
             </div>
             <div class="py-32">
                 <p class="font-bold mx-5">5. 록시땅 숙면 키트</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/sleep.png" class="rounded-lg">
+                    <span>밤에 잘 못자는 그대를 위해.. 조금이라도 잘 자길 바라는 마음으로</span>
                 </div>
             </div>
             <div class="py-32">
                 <p class="font-bold mx-5">6. 포토존 소품</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
-                </div>
-            </div>
-            <div class="py-32">
-                <p class="font-bold mx-5">7. 에어팟케이스</p>
-                <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
-                </div>
-            </div>
-            <div class="py-32">
-                <p class="font-bold mx-5">8. 담배케이스, 미니카</p>
-                <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/party.png" class="rounded-lg">
+                    <span>혜연빠에 생기를 더해줄 소품들..!</span>
                 </div>
             </div>
             <div class="pt-32 pb-52 ">
-                <p class="font-bold mx-5">9. 달 반지</p>
+                <p class="font-bold mx-5">7. 각종 악세사리</p>
                 <div class="mx-5">
-                    <img src="img/miband.png" class="rounded-lg">
-                    <span>hi</span>
+                    <img src="img/acg.png" class="rounded-lg">
+                    <span>오다주웠다..</span>
                 </div>
+            </div>
+            <div class="my-80 mx-5 text-center p-5 bg-gradient-to-r from-yellow-300 via-red-400 to-pink-400 rounded-md" id="mchange">
+                <p class="text-xl my-3 text-white"><b>여길클릭해주세요💛</b></p>
+                <audio autoplay controls loop class="mx-auto hidden" id="per">
+                    <source src="music/Perfect Remix.mp3" type="audio/mp3">
+                </audio>
             </div>
             <div class="py-16 mx-16 bg-gray-100 font-bold text-center rounded-md border-b-8 border-r-8 border-black" onclick="location.href='/ps4.html'">
                 <p class="text-4xl">PS4 게임 추천</p>
@@ -88,8 +80,18 @@
             <div class="text-center text-3xl font-light py-96">
                 <p>Thank You❤</p>
             </div>
-
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    var ad = $("#sofar");
+    var ad2 = $("#per");
+    $('#mchange').on('click', function(e) {
+        ad.trigger('pause');
+        ad2.trigger('play');
+    })
+});
+</script>
 </body>
 </html>
